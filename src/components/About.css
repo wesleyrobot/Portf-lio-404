@@ -1,0 +1,367 @@
+.about {
+  background: #f5f5f5;
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-center {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-center h3 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.header-center p {
+  font-size: 16px;
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section - Retro Computer Terminal Style */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  padding: 0;
+  background: #0a0a0a;
+  border: 4px solid #333;
+  border-radius: 8px;
+  box-shadow:
+    0 0 20px rgba(0, 255, 0, 0.1),
+    inset 0 0 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-header {
+  background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 12px 20px;
+  border-bottom: 2px solid #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-button.close {
+  background: #ff5f56;
+}
+
+.terminal-button.minimize {
+  background: #ffbd2e;
+}
+
+.terminal-button.maximize {
+  background: #27c93f;
+}
+
+.terminal-title {
+  margin-left: 10px;
+  color: #888;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+.terminal-body {
+  padding: 30px;
+  background: #000;
+  min-height: 400px;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+.terminal-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 3px
+    );
+  pointer-events: none;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.terminal-line {
+  color: #00ff00;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  opacity: 0;
+  animation: typeIn 0.05s forwards;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.terminal-input {
+  color: #00ff00;
+}
+
+.terminal-output {
+  color: #00cc00;
+  margin-left: 20px;
+}
+
+.terminal-highlight {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #00ff00;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.terminal-divider {
+  color: #00ff00;
+  opacity: 0.3;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.terminal-line:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.terminal-line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.terminal-line:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.terminal-line:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.terminal-line:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.terminal-line:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.terminal-line:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.terminal-line:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.terminal-line:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.terminal-line:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.terminal-line:nth-child(11) {
+  animation-delay: 2.2s;
+}
+
+.terminal-line:nth-child(12) {
+  animation-delay: 2.4s;
+}
+
+/* Tech Icons Section */
+.tech-icons-section {
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.tech-icon-card {
+  background: var(--card-bg);
+  padding: 25px 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px var(--card-shadow);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+}
+
+.tech-icon-card.tech-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tech-icon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-icon-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow:
+    0 12px 30px rgba(102, 126, 234, 0.2),
+    0 0 0 1px rgba(102, 126, 234, 0.1);
+  border-color: var(--primary-color);
+}
+
+.tech-icon-card:hover::before {
+  opacity: 0.05;
+}
+
+.tech-icon-card img,
+.tech-icon-card svg {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  filter: grayscale(0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.tech-icon-card:hover img,
+.tech-icon-card:hover svg {
+  transform: scale(1.2) rotateY(360deg);
+  filter: grayscale(0) drop-shadow(0 4px 12px rgba(102, 126, 234, 0.3));
+}
+
+.tech-icon-card span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    border: 2px solid #333;
+  }
+
+  .terminal-body {
+    padding: 20px;
+    min-height: 300px;
+  }
+
+  .terminal-line {
+    font-size: 14px;
+  }
+
+  .tech-icons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .tech-icon-card {
+    padding: 20px 10px;
+  }
+
+  .tech-icon-card img {
+    width: 50px;
+    height: 50px;
+  }
+}

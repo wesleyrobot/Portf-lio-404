@@ -1,0 +1,111 @@
+.theme-toggle-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle-tooltip {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.theme-toggle-container:hover .theme-toggle-tooltip {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+[data-theme="hacker"] .theme-toggle-tooltip {
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.theme-toggle-label {
+  height: 40px;
+  width: 80px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+              inset 0 0 20px 1px rgba(0, 0, 0, 0.488),
+              10px 20px 30px rgba(0, 0, 0, 0.096),
+              inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.theme-toggle-label:hover {
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+.theme-toggle-input {
+  display: none;
+}
+
+.theme-toggle-input:checked ~ .theme-toggle-label {
+  background-color: #1a1a1a;
+  box-shadow: inset 0 0 5px 4px rgba(0, 0, 0, 1),
+              inset 0 0 20px 1px rgba(0, 255, 0, 0.3),
+              10px 20px 30px rgba(0, 255, 0, 0.15),
+              inset 0 0 0 3px rgba(0, 255, 0, 0.5);
+}
+
+.theme-toggle-input:checked ~ .theme-toggle-label:hover {
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+.theme-toggle-input:checked ~ .theme-toggle-label::before {
+  left: 47px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #00ff00 70%);
+  box-shadow: 0 2px 1px rgba(0, 255, 0, 0.3),
+              0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.theme-toggle-label::before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(130deg, #757272 10%, #ffffff 11%, #726f6f 62%);
+  left: 6px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+              10px 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-container {
+    top: 15px;
+    right: 20px;
+  }
+
+  .theme-toggle-label {
+    height: 35px;
+    width: 70px;
+  }
+
+  .theme-toggle-label::before {
+    height: 24px;
+    width: 24px;
+    left: 5px;
+  }
+
+  .theme-toggle-input:checked ~ .theme-toggle-label::before {
+    left: 41px;
+  }
+}

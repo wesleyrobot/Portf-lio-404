@@ -1,0 +1,148 @@
+.contact {
+  background: var(--bg-secondary);
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+/* Contact Buttons Container */
+.contact-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.contact-buttons {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="hacker"] .contact-buttons {
+  background: rgba(0, 17, 0, 0.3);
+  border-color: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 255, 0, 0.2);
+}
+
+/* Animation for buttons */
+.contact-button-wrapper {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-button-wrapper.btn-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.contact-button-wrapper {
+  position: relative;
+}
+
+.contact-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  clip-path: url(#squircleClip);
+  background: transparent;
+}
+
+.contact-button:hover {
+  transform: scale(1.1) translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-button:active {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Icon size */
+.contact-button svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Button Colors - REMOVIDO - usando apenas estilos inline */
+
+/* Force reset - garantir que nada interfira com os estilos inline */
+.contact-button-wrapper a {
+  all: unset;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+.contact-button-wrapper a:hover {
+  transform: scale(1.1) translateY(-8px) !important;
+}
+
+@media (max-width: 768px) {
+  .contact-button-wrapper a {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-buttons {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .contact-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-button svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,399 @@
+:root {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #f093fb;
+  --dark-bg: #0f172a;
+  --light-bg: #f8f9fa;
+  --text-dark: #1e293b;
+  --text-light: #94a3b8;
+  --success: #10b981;
+  --terminal-green: #00ff00;
+
+  /* Light mode (padrão) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-dark-section: #2a2a2a;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* HACKER MODE */
+[data-theme="hacker"] {
+  --bg-primary: #000000;
+  --bg-secondary: #001100;
+  --bg-dark-section: #001a00;
+  --text-primary: #00ff00;
+  --text-secondary: #00cc00;
+  --border-color: rgba(0, 255, 0, 0.3);
+  --card-bg: #001100;
+  --card-shadow: rgba(0, 255, 0, 0.2);
+  --primary-color: #00ff00;
+  --secondary-color: #00cc00;
+  --accent-color: #00ff00;
+}
+
+[data-theme="hacker"] body {
+  background: #000000;
+  color: #00ff00;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+[data-theme="hacker"] * {
+  border-color: rgba(0, 255, 0, 0.3) !important;
+}
+
+[data-theme="hacker"] .tech-icon-card,
+[data-theme="hacker"] .site-card,
+[data-theme="hacker"] .project-item {
+  background: #001100 !important;
+  border: 2px solid #00ff00 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3) !important;
+}
+
+[data-theme="hacker"] h1,
+[data-theme="hacker"] h2,
+[data-theme="hacker"] h3,
+[data-theme="hacker"] h4 {
+  color: #00ff00 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+[data-theme="hacker"] .terminal-highlight {
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+[data-theme="hacker"] .gray,
+[data-theme="hacker"] .light {
+  background: #000000 !important;
+}
+
+[data-theme="hacker"] section {
+  background: #000000 !important;
+}
+
+
+[data-theme="hacker"] .dark {
+  background: #000000 !important;
+}
+
+/* Logo fica preto no hacker mode */
+[data-theme="hacker"] .splash-name,
+[data-theme="hacker"] .logo,
+[data-theme="hacker"] #logo,
+[data-theme="hacker"] .logo-text {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  text-shadow: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%23667eea" opacity="0.3"/><circle cx="16" cy="16" r="4" fill="%23667eea"/></svg>') 16 16, auto;
+}
+
+[data-theme="hacker"] body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" fill="none" stroke="%2300ff00" stroke-width="2"/><circle cx="16" cy="16" r="3" fill="%2300ff00"/></svg>') 16 16, auto;
+}
+
+a, button {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="%23667eea" opacity="0.5"/><circle cx="16" cy="16" r="6" fill="%23667eea"/></svg>') 16 16, pointer;
+}
+
+[data-theme="hacker"] a,
+[data-theme="hacker"] button {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="20" fill="none" stroke="%2300ff00" stroke-width="3"/><rect x="12" y="12" width="8" height="8" fill="%2300ff00"/></svg>') 16 16, pointer;
+}
+
+/* Matrix Rain Canvas */
+#matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[data-theme="hacker"] #matrix-rain {
+  opacity: 0.15;
+}
+
+/* Glitch Effect */
+[data-theme="hacker"] .glitch {
+  animation: glitchEffect 3s infinite;
+}
+
+@keyframes glitchEffect {
+  0%, 90%, 100% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  92% {
+    text-shadow:
+      -2px 0 #00ff00,
+      2px 0 #00ffff,
+      0 0 10px rgba(0, 255, 0, 0.8);
+    transform: translate(-2px, 0);
+  }
+  94% {
+    text-shadow:
+      2px 0 #00ff00,
+      -2px 0 #00ffff,
+      0 0 10px rgba(0, 255, 0, 0.8);
+    transform: translate(2px, 0);
+  }
+  96% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    transform: translate(0, 0);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes slide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Utility Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* ==================== SCROLL ANIMATIONS ==================== */
+
+/* Base state - hidden */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Visible state */
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variações de direção */
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Delays para elementos em sequência */
+.scroll-delay-1 { transition-delay: 0.1s; }
+.scroll-delay-2 { transition-delay: 0.2s; }
+.scroll-delay-3 { transition-delay: 0.3s; }
+.scroll-delay-4 { transition-delay: 0.4s; }
+.scroll-delay-5 { transition-delay: 0.5s; }
+.scroll-delay-6 { transition-delay: 0.6s; }
+
+.section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section.projects {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.projects .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* Responsive Global */
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1400px) {
+  .section {
+    padding: 80px 20px;
+    max-width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 70px 15px;
+    max-width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 50px 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 28px !important;
+  }
+
+  .section-subtitle {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 40px 10px;
+  }
+
+  .section-title {
+    font-size: 24px !important;
+  }
+}
