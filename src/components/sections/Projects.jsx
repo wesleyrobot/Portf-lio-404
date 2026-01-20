@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from '../../hooks';
+import { projects } from '../../data';
 import './Projects.css';
-import { projects } from '../data/projects';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ const Projects = () => {
 
   const getImagePath = (imageName) => {
     try {
-      return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+      return new URL(`../../assets/images/${imageName}`, import.meta.url).href;
     } catch {
       return `https://via.placeholder.com/800x600?text=${currentProject.title}`;
     }

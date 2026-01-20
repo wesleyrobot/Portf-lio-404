@@ -1,5 +1,5 @@
-import useScrollAnimation from '../hooks/useScrollAnimation';
-import './Contact.css?v=2';
+import { useScrollAnimation } from '../../hooks';
+import './Contact.css';
 
 const Contact = () => {
   const [headerRef, headerVisible] = useScrollAnimation({ threshold: 0.2 });

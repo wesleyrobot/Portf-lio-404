@@ -1,6 +1,6 @@
-import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from '../../hooks';
+import { skillCategories } from '../../data';
 import './Skills.css';
-import { skillCategories } from '../data/skills';
 
 const Skills = () => {
   const [headerRef, headerVisible] = useScrollAnimation({ threshold: 0.2 });

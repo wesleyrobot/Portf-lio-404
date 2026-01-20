@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { useTheme } from './hooks/useTheme';
-import SplashScreen from './components/SplashScreen';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Sites from './components/Sites';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Chatbot from './components/Chatbot';
-import ThemeToggle from './components/ThemeToggle';
+
+// Hooks
+import { useTheme } from './hooks';
+
+// Layout Components
+import { Header, Footer, SplashScreen } from './components/layout';
+
+// Section Components
+import { Hero, About, Projects, Sites, Skills, Contact } from './components/sections';
+
+// UI Components
+import { Chatbot, ThemeToggle } from './components/ui';
+
+// Styles
 import './styles/index.css';
 
 function App() {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from '../../hooks';
 import './About.css';
 
 const About = () => {

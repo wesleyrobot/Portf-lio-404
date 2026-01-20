@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './Hero.css';
-import normalImageLight from '../assets/images/wesley_normal_light.jpg';
-import normalImageDark from '../assets/images/wesley_normal_dark.jpg';
-import roboImageLight from '../assets/images/wesley_robo_light.png';
-import roboImageDark from '../assets/images/wesley_robo_dark.png';
+import normalImageLight from '../../assets/images/wesley_normal_light.jpg';
+import normalImageDark from '../../assets/images/wesley_normal_dark.jpg';
+import roboImageLight from '../../assets/images/wesley_robo_light.png';
+import roboImageDark from '../../assets/images/wesley_robo_dark.png';
 
 const Hero = () => {
   const [hovered, setHovered] = useState(null);
