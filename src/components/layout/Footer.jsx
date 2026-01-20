@@ -1,5 +1,5 @@
 import './Footer.css';
-import Ghost from './Ghost';
+import { Ghost } from '../ui';
 
 const Footer = () => {
   const scrollToTop = () => {
