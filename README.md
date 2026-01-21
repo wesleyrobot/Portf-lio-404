@@ -136,8 +136,7 @@ Projeto pronto para deploy em:
 
 **Wesley Aparecido Costa**
 - Email: wesleymr.robot@gmail.com
-- GitHub: [@wesleyara](https://github.com/wesleyara)
-- LinkedIn: [/wesleyara](https://linkedin.com/in/wesleyara)
+
 
 ## 📄 Licença
 
