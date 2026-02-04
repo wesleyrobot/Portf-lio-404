@@ -2,14 +2,14 @@
 
 Portfolio profissional desenvolvido com React e Vite, apresentando projetos, habilidades e informações de contato.
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **React 18** - Biblioteca JavaScript para construção de interfaces
 - **Vite** - Build tool moderna e rápida
 - **CSS3** - Estilização com variáveis CSS e animações
 - **React Hooks** - useState, useEffect, hooks customizados
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 portfolio-react/
@@ -40,7 +40,7 @@ portfolio-react/
 └── vite.config.js
 ```
 
-## 🎨 Funcionalidades
+##  Funcionalidades
 
 - ✅ **Splash Screen Animada** - Tela inicial com efeito de digitação
 - ✅ **Tema Dark/Light** - Alternância entre modos claro e escuro
@@ -52,7 +52,7 @@ portfolio-react/
 - ✅ **Animações CSS3** - Efeitos visuais modernos
 - ✅ **Intersection Observer** - Animações ao scroll
 
-## 🛠️ Como Executar
+##  Como Executar
 
 1. **Instalar dependências:**
    ```bash
@@ -69,7 +69,7 @@ portfolio-react/
    http://localhost:5173
    ```
 
-## 📦 Build para Produção
+##  Build para Produção
 
 ```bash
 npm run build
@@ -109,7 +109,7 @@ Gerencia o tema (light/dark) com persistência em localStorage.
 const { theme, toggleTheme } = useTheme();
 ```
 
-## 🎨 Variáveis CSS
+##  Variáveis CSS
 
 O projeto utiliza CSS Custom Properties para fácil customização:
 
@@ -119,12 +119,12 @@ O projeto utiliza CSS Custom Properties para fácil customização:
 --accent-color: #f093fb
 ```
 
-## 📱 Responsividade
+##  Responsividade
 
 - **Desktop:** Layout completo com todas as funcionalidades
 - **Mobile:** Menu hamburger, layout adaptado, cards empilhados
 
-## 🌐 Deploy
+##  Deploy
 
 Projeto pronto para deploy em:
 - Vercel
@@ -132,7 +132,7 @@ Projeto pronto para deploy em:
 - GitHub Pages
 - Qualquer hosting estático
 
-## 👨‍💻 Autor
+##  Autor
 
 **Wesley Aparecido Costa**
 - Email: wesleymr.robot@gmail.com
